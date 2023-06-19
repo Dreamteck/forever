@@ -1,0 +1,4 @@
+[submodule "Assets/Dreamteck/Utilities"]
+	path = Assets/Dreamteck/Utilities
+	url = https://github.com/Dreamteck/utilities.git
+	branch = main
