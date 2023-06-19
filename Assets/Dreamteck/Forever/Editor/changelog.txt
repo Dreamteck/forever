@@ -1,0 +1,94 @@
+-------- 1.16 --------
+SUPPORT: Official Unity 2023 support
+SUPPORT: Support for Dreamteck Splines 3.0.5
+
+FIX: Fixed custom level segments not starting at the location of the level generator
+FIX: Fixed level generation hanging when destroying and creating a segment from the API simultaneously
+
+FEATURE: Added a dialog warning if a level segment's scale is different than 1,1,1
+
+OPTIMIZATION: Improved the performance of unloading assets when remote levels are used
+OPTIMIZATION: Reduced memory fragmentation
+
+
+
+-------- 1.15 --------
+!!!DELETE THE OLD INSTALLATION BEFORE INSTALLING!!!
+SUPPORT: Official Unity 2022.1 support
+SUPPORT: Support for Splines 3 (Dreamteck Splines)
+
+FEATURE: Added a new override of the LevelGenerator.instance.QueueSegmentCreation method which forces the level generator to create a custom level segment
+
+FIX: Fixed improper path tangent generation for the Wavy Path Generator
+FIX: Fixed null reference exception when floating origin is triggered on a segment with custom paths
+FIX: Fixed repeating segments in Shuffle mode
+
+-------- 1.14 --------
+SUPPORT: Official Unity 2021.2 support
+
+FEATURE: The package now comes with Assembly Definition files
+FEATURE: Added feature to exclude mesh batching on selected platforms (Create a MeshBatchSettings object and link it in the Mesh Batcher components)
+FEATURE: Added support for multiple custom Path Rule components per Level Segment object
+FEATURE: Added randomizer recording functionality for cases where levels need to be generated in the same way after retrying
+
+FIX: Memory and object reference optimization
+FIX: Fixed Welcome Screen throwing errors in versions 2021 and above
+FIX: The Path Generator sample rate option now works properly
+FIX: Small fixes in the examples package
+
+-------- 1.13 --------
+FIX: Fixed and improved the behavior of looping levels
+FIX: Fixed an issue with registering the Bend Spline of the SegmentObjectSettings component
+FIX: Improved logic for handling (skipping) disabled levels
+FIX: Fixed the custom path editor inspector for segments with custom paths
+FIX: Logic of LevelGenerator.CalculateLength
+
+API: Added a SetPercent method to the Runner class so that it can be teleported anywhere along the existing path easily
+
+-------- 1.12 --------
+FEATURE: Added a new Shuffle sequence mode which randomizes the segments' order without repeating them
+FEATURE: Introduced a new system for unloading assets which bypasses Resources.UnloadUnusedAssets - UnloadUnusedAssets can now be toggled through the LevelGenerator component
+
+FIX: Brought back the possibility to loop custom path generator splines
+FIX: Fixed an issue with segment creation and level loading order
+FIX: Various small performance optimizations
+FIX: Fixed custom paths behavior for custom level segments
+
+API: Added the "associatedRemoteLevel" property to ForeverLevel to provide a reference to the RemoteLevel component of remote levels
+API: Added the "onSegmentCreated" event to the LevelGenerator
+
+SUPPORT: Official Unity 2020.3 support
+SUPPORT: Official Unity 2021.1 support
+
+-------- 1.11 --------
+FEATURE: Added support for dragging multiple level segment prefabs into the sequence editor at once
+
+FIX: Improved general stability of the generation logic
+FIX: Fixed errors and segments not removing when using Forever in Debug mode
+FIX: Fixed an issue where entire levels got skipped when calling ForeverLevel.SkipSequence
+FIX: LevelGenerator.levelChangeHandler will no longer be overridden upon each LevelGenerator.StartGeneration call
+FIX: Fixed segments not being destroyed in some cases when object pooling is enabled
+
+SUPPORT: Reworked segment generation multithreading to support a wider range of devices (Nintendo Switch)
+SUPPORT: Official 2020.2 support
+SUPPORT: Minimum supported version of Unity is now 2018.4
+
+
+-------- 1.10 --------
+FIX: Fixed errors in the editor when using custom segments with custom paths
+FIX: General code quality improvement
+FIX: Fixed the StackOverflow exception when drawing empty splines
+FIX: Fixed serialization issues with the SegmentObjectSettings component and the Extrusion Settings window
+FIX: Fixed editor crash when exiting play mode while having a path generator selected
+FIX: Fixed issues with Path Generator objects serialization
+FIX: Patched memory leaks related to LevelSegment.next and LevelSegment.previous
+
+FEATURE: Forever is now using the convenient Dreamteck Splines editor for for all spline editing
+FEATURE: Introducing object pooling for levels, defined in separate scenes
+FEATURE: Levels in Forever are now defined using Scriptable Objects and can be extended
+FEATURE: Introducing randomizer objects which allow custom randomization for path generation and level and sequence iteration
+FEATURE: Added per-level level path overriding
+
+SUPPORT: Minimum supported version of Unity is now 2018.3
+SUPPORT: Official support for Unity 2020.1
+

@@ -1,0 +1,17 @@
+{
+    "name": "Dreamteck.Forever",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fdef4a859838e3449b625605ab13c25",
+        "GUID:fcf26afa24f209f48995057e40e2e83e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Dreamteck.Forever.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b94a1c673e7bfea4ebba04b756a26be8",
+        "GUID:fcf26afa24f209f48995057e40e2e83e",
+        "GUID:e1858e8552db82d4dabda17b0cadb7dd",
+        "GUID:2fdef4a859838e3449b625605ab13c25",
+        "GUID:dccd6f29df4cff34588f7344b286192f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
