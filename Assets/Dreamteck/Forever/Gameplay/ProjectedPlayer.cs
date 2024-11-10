@@ -48,12 +48,12 @@ namespace Dreamteck.Forever
 
         protected virtual void OnEnable()
         {
-            FloatingOrigin.onOriginOffset += OnOriginOffset;
+            OriginReset.onOriginOffset += OnOriginOffset;
         }
 
         protected virtual void OnDisable()
         {
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
         }
 
         void OnOriginOffset(Vector3 direction)

@@ -49,8 +49,8 @@ namespace Dreamteck.Forever
             _isNewLevel = false;
             transform = input.transform;
             lastPoint = new SplinePoint(Vector3.zero, Vector3.forward, Vector3.up, 1f, Color.white);
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
-            FloatingOrigin.onOriginOffset += OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset += OnOriginOffset;
         }
 
         /// <summary>
@@ -65,9 +65,9 @@ namespace Dreamteck.Forever
             _isNewLevel = previousGenerator._isNewLevel;
             transform = previousGenerator.transform;
             lastPoint = previousGenerator.lastPoint;
-            FloatingOrigin.onOriginOffset -= previousGenerator.OnOriginOffset;
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
-            FloatingOrigin.onOriginOffset += OnOriginOffset;
+            OriginReset.onOriginOffset -= previousGenerator.OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset += OnOriginOffset;
         }
 
         public virtual void Continue(LevelSegment segment)
@@ -76,8 +76,8 @@ namespace Dreamteck.Forever
             this.segment = segment;
             lastPoint = segment.path.spline.points[segment.path.spline.points.Length - 1];
             InverseTransformPoint(ref lastPoint);
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
-            FloatingOrigin.onOriginOffset += OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset += OnOriginOffset;
         }
 
         public virtual void Clear()
@@ -86,7 +86,7 @@ namespace Dreamteck.Forever
             segment = null;
             _isNewLevel = false;
             transform = null;
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Dreamteck.Forever
 
         private void OnDestroy()
         {
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
         }
 
         /// <summary>

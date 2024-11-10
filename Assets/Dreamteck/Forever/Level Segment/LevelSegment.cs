@@ -154,12 +154,12 @@ namespace Dreamteck.Forever
 
         private void OnEnable()
         {
-            FloatingOrigin.onOriginOffset += OnOriginOffset;
+            OriginReset.onOriginOffset += OnOriginOffset;
         }
 
         private void OnDisable()
         {
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
         }
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace Dreamteck.Forever
 
         protected virtual void OnDestroy()
         {
-            FloatingOrigin.onOriginOffset -= OnOriginOffset;
+            OriginReset.onOriginOffset -= OnOriginOffset;
 
             for (int i = 0; i < objectProperties.Length; i++)
             {
