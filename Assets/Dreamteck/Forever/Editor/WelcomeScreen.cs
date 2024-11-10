@@ -9,7 +9,7 @@ namespace Dreamteck.Forever
     [InitializeOnLoad]
     public class PluginInfo
     {
-        public static string version = "1.16";
+        public static string version = "1.17";
         private static bool open = false;
         static PluginInfo()
         {

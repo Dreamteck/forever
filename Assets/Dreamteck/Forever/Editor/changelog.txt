@@ -1,3 +1,10 @@
+-------- 1.17 --------
+SUPPORT: Official Unity 6 support
+
+CHANGE: Renamed the FloatingOrigin component to OriginReset due to an unused trademark that was registered AFTER the plug-in's initial release. We are sorry for the inconvenience but were left no choice. 
+
+API: Updated the splines editor to the latest 3.0.6 version
+
 -------- 1.16 --------
 SUPPORT: Official Unity 2023 support
 SUPPORT: Support for Dreamteck Splines 3.0.5
